@@ -1,0 +1,59 @@
+//Normalmente em APIs comuns usamos os métodos:
+
+GET /users
+POST /users
+PUT /users/:id
+DELETE /users/:id\
+
+#GraphQL
+Uma unica rota que aceita
+
+POST /graphql
+
+Mas ele manuplina de acordo com o corpo da requisição
+
+{
+    query allUsers: {
+        users() // que vai retornar todos os usuários
+    }
+
+    query allRequests()
+}
+
+//Passa mais responsabilidade para o Front-End
+
+Temos apenas 3 metódos:
+    Query; Somente busca as informações
+    Mutation: Alterar, criar ou deletar uma informação 
+    Subscription: Tratar com real-time integrada
+
+{
+    mutation updateUser {
+        updateUser(id: 1){
+             nome: 'Agmar'
+        }
+    }
+
+    query users{
+
+    }
+}
+
+
+//Documentação automatica
+
+------------------------------------------
+Desenvolvimento:
+
+yarn add  graphql-yoga
+
+yarn add    mongoose
+
+mutation{
+  createUser(name: "Agmar", email: "agmartorres@gmail.com")
+  {id}
+}
+node srx/server.js
+
+
+

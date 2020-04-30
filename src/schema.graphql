@@ -1,0 +1,16 @@
+#Tipos de rotas
+type User{
+    id: ID! #Campo obrigatório !
+    name: String!
+    email: String!
+}
+
+type Query{
+    # Primeiro !: Retorna o tipo Usuario, Segundo !: Retorna Especificamente um Array
+    users: [User!]  
+    user( id: ID): User #Retornar um único usuário
+}
+
+type Mutation{
+    createUser(name: String!, email: String!): User
+}
