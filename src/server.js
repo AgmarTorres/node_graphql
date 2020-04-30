@@ -35,5 +35,9 @@ Todos os Usuários
     }
   }
 
+mutation{
+  createUser(name: "Agmar", email: "agmartorres@gmail.com")
+  {id}
+}
 
 */
